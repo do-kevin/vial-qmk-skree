@@ -13,14 +13,19 @@ OLED_DRIVER = ssd1306
 OLED_TRANSPORT = i2c
 
 WPM_ENABLE = yes
-EXTRAKEY_ENABLE = yes       # Audio control and System control
-NKRO_ENABLE = yes           # Enable N-Key Rollover
+EXTRAKEY_ENABLE = yes
+NKRO_ENABLE = yes
 
 ENCODER_ENABLE = no
 ENCODER_MAP_ENABLE = no
 
-RGBLIGHT_ENABLE = yes
+RGB_MATRIX_ENABLE = yes
+VIALRGB_ENABLE = yes
 WS2812_DRIVER = vendor
 SLEEP_LED_ENABLE = no
 
 OPT_DEFS += -DHAL_USE_I2C=TRUE
+
+QMK_SETTINGS_ENABLE = no   # 🔧 Prevent build errors
+TAP_DANCE_ENABLE = no
+KEY_OVERRIDE_ENABLE = no
